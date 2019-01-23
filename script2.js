@@ -11,7 +11,6 @@ const getPeoplePromise = fetch => {
         })
 }
 
-
 const getPeopleAsyncAwait = async (fetch) => {
   const getRequest = await fetch('https://swapi.co/api/people');
   const data = await getRequest.json();
@@ -20,4 +19,6 @@ const getPeopleAsyncAwait = async (fetch) => {
     count: data.count,
   }
 }
-console.log(getPeopleAsyncAwait(fetch));
+// console.log(getPeopleAsyncAwait(fetch));
+
+module.exports = {getPeoplePromise, getPeopleAsyncAwait};
